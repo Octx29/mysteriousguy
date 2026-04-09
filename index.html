@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Chirawat Padee</title>
+    <title>Portfolio - Octx29</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Sarabun:wght@400;700&display=swap');
 
@@ -171,14 +171,7 @@
             border-left: 5px solid var(--kmitl-orange);
             padding-left: 20px;
         }
-        .kmitl-logo {
-            position: absolute;
-            width: 80px;
-            height: auto;
-            z-index: 10;
-        }
 
-        .page-1 .kmitl-logo { bottom: 40px; right: 40px; }
         .cover-photo-placeholder {
             width: 250px;
             height: 250px;
@@ -186,8 +179,11 @@
             background-color: var(--accent-gray);
             border: 5px solid var(--kmitl-orange);
             margin: 30px 0;
-            object-fit: cover;
-            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-text);
+            font-style: italic;
         }
         .cover-title h1 { font-size: 3.5rem; margin: 0; color: var(--light-text); }
         .cover-title h2 { font-size: 1.8rem; color: var(--gray-text); font-weight: 300; margin-bottom: 30px; }
@@ -203,6 +199,8 @@
 
         .preface-content { margin-top: 20px; max-width: 90%; }
         .preface-content p { text-indent: 40px; font-size: 1.1rem; color: var(--gray-text); }
+        .preface-content ul { color: var(--gray-text); font-family: 'Sarabun', sans-serif; font-size: 1.1rem; line-height: 1.8; margin-left: 20px; }
+        .preface-content li { margin-bottom: 10px; }
         .signature { margin-top: 60px; text-align: right; color: var(--light-text); }
         .signature p { font-size: 1.1rem; margin: 0; }
 
@@ -231,8 +229,11 @@
             background-color: var(--accent-gray);
             border: 4px solid var(--kmitl-orange);
             margin-bottom: 20px;
-            object-fit: cover;
-            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-text);
+            font-style: italic;
         }
         .profile-section { width: 100%; margin-bottom: 25px; }
         .profile-section h3 { 
@@ -380,108 +381,40 @@
         .quote::after { bottom: -40px; right: -10px; }
         .thank-you { font-size: 4rem; color: var(--light-text); font-weight: 700; margin-bottom: 20px; }
         .back-contact p { margin: 5px 0; }
-        .page-10 .kmitl-logo { position: absolute; bottom: 40px; left: 40px; width: 60px; }
-
 
         @media (max-width: 768px) {
-            body {
-                padding: 50px 0 0 0;
-            }
-
+            body { padding: 50px 0 0 0; }
             .side-nav {
-                top: 0;
-                bottom: auto;
-                transform: none;
-                background-color: var(--dark-bg);
-                border-bottom: 1px solid var(--accent-gray);
-                border-top: none;
-                padding: 0;
+                top: 0; bottom: auto; transform: none; background-color: var(--dark-bg);
+                border-bottom: 1px solid var(--accent-gray); border-top: none; padding: 0;
             }
-            .side-nav ul {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                padding: 5px 0;
-            }
-            .side-nav li a {
-                padding: 8px 5px;
-                font-size: 0.8rem;
-                font-weight: 300;
-            }
-            .side-nav li a::after {
-                display: none;
-            }
-            .side-nav li a:hover {
-                background-color: transparent;
-                color: var(--kmitl-orange);
-                transform: none;
-            }
-            /* ------------------------------------- */
-
-            .portfolio-container {
-                width: 100%;
-                box-shadow: none;
-            }
-
-            .page {
-                height: auto;
-                min-height: 100vh;
-                padding: 40px 25px 25px 25px;
-                border-bottom: 2px solid #444;
-                scroll-margin-top: 50px;
-            }
-
-            .page-title {
-                font-size: 2rem;
-                margin-bottom: 30px;
-            }
-
+            .side-nav ul { display: flex; justify-content: space-around; width: 100%; padding: 5px 0; }
+            .side-nav li a { padding: 8px 5px; font-size: 0.8rem; font-weight: 300; }
+            .side-nav li a::after { display: none; }
+            .side-nav li a:hover { background-color: transparent; color: var(--kmitl-orange); transform: none; }
+            .portfolio-container { width: 100%; box-shadow: none; }
+            .page { height: auto; min-height: 100vh; padding: 40px 25px 25px 25px; border-bottom: 2px solid #444; scroll-margin-top: 50px; }
+            .page-title { font-size: 2rem; margin-bottom: 30px; }
             .cover-photo-placeholder { width: 180px; height: 180px; }
             .cover-title h1 { font-size: 2.8rem; }
             .cover-title h2 { font-size: 1.4rem; }
             .cover-name h3 { font-size: 2rem; }
             .cover-name h4 { font-size: 1.2rem; }
-            
-            /* ★★★ 1. ปรับปรุง: แก้ไขการทับซ้อนของโลโก้ในจอมือถือ ★★★ */
-            .submission-info {
-                text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
-            }
-            .submission-info p { 
-                font-size: 1rem; 
-            }
-            .page-1 .kmitl-logo {
-                position: relative; /* ปิดการลอย */
-                bottom: auto;       /* รีเซ็ตค่า */
-                right: auto;      /* รีเซ็ตค่า */
-                margin-top: 30px;   /* เว้นระยะห่างจากกล่องข้อความ */
-                width: 70px;        /* ปรับขนาดให้เล็กลงเล็กน้อย */
-            }
-            /* ------------------------------------- */
-
+            .submission-info { text-align: center; }
+            .submission-info p { font-size: 1rem; }
             .geometric-shape { display: none; }
-
             .preface-content { max-width: 100%; }
-            .preface-content p { font-size: 1rem; }
-
+            .preface-content p, .preface-content ul { font-size: 1rem; }
             .toc-list li { font-size: 1.5rem; margin-bottom: 30px;}
             .toc-number { font-size: 1.8rem; margin-right: 15px; }
             .toc-en { font-size: 1rem; }
-
             .profile-grid { grid-template-columns: 1fr; }
             .profile-left { align-items: center; }
-            
-            .skill-icon {
-                height: 40px;
-                padding: 0 20px;
-                font-size: 0.9rem;
-            }
-
+            .skill-icon { height: 40px; padding: 0 20px; font-size: 0.9rem; }
             .activities-grid, .certs-grid { grid-template-columns: 1fr; }
             .cert-image-placeholder { height: 180px; }
-
             .project-card { grid-template-columns: 1fr; }
             .project-left { margin-bottom: 15px; }
-
             .thank-you { font-size: 3rem; }
             .quote { font-size: 1.2rem; max-width: 90%; }
         }
@@ -492,10 +425,10 @@
     <nav class="side-nav">
         <ul>
             <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#preface">คำนำ</a></li>
             <li><a href="#profile">ประวัติ</a></li>
             <li><a href="#education">การศึกษา</a></li>
             <li><a href="#activities">กิจกรรม</a></li>
-            <li><a href="#certificates">เกียรติบัตร</a></li>
             <li><a href="#projects">ผลงาน</a></li>
         </ul>
     </nav>
@@ -508,30 +441,34 @@
                 <h1>PORTFOLIO</h1>
                 <h2>แฟ้มสะสมผลงาน</h2>
             </div>
-            <img src="IMG_20251019_002124.jpg" alt="Chirawat Padee" class="cover-photo-placeholder">
+            <div class="cover-photo-placeholder">[ รูปภาพหน้าปก ]</div>
             <div class="cover-name">
-                <h3>นายจีรวัฒณ์ ปาดี</h3>
-                <h4>Mr. Chirawat Padee</h4>
+                <h3>Octx29</h3>
+                <h4>Software & Game Developer</h4>
             </div>
-            <p>โรงเรียนสตรีประเสริฐศิลป์</p>
             <div class="submission-info">
                 <p>ยื่นสมัครเพื่อพิจารณาคัดเลือกบุคคลเข้าศึกษาต่อระดับปริญญาตรี</p>
                 <p><strong>คณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมซอฟต์แวร์</strong></p>
                 <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
             </div>
-            <img src="image_44e6ed.jpg" alt="KMITL Logo" class="kmitl-logo"> 
         </div>
+        
         <div class="page page-2" id="preface">
             <div class="circuit-bg"></div>
             <div class="geometric-shape shape-2"></div>
             <h1 class="page-title">PREFACE<br>คำนำ</h1>
             <div class="preface-content">
-                <p>กระผม นายจีรวัฒณ์ ปาดี มีความสนใจและความหลงใหลในโลกของเทคโนโลยีและการเขียนโปรแกรมมาโดยตลอด การได้สร้างสรรค์สิ่งต่างๆ จากตรรกะและโค้ด ทำให้กระผมค้นพบว่า "วิศวกรรมซอฟต์แวร์" คือเส้นทางที่ใช่สำหรับตนเอง ความฝันสูงสุดของกระผมคือการได้เป็นส่วนหนึ่งในการพัฒนาซอฟต์แวร์และนวัตกรรมที่สามารถสร้างประโยชน์และเปลี่ยนแปลงสังคมให้ดีขึ้น</p>
-                <p>แฟ้มสะสมผลงานฉบับนี้จัดทำขึ้นเพื่อนำเสนอประวัติส่วนตัว ประวัติการศึกษา ผลงาน และประสบการณ์ต่างๆ ที่กระผมได้สั่งสมมาตลอดช่วงมัธยมศึกษาตอนปลาย ซึ่งสะท้อนให้เห็นถึงความมุ่งมั่น ความพยายาม และศักยภาพในการเรียนรู้เพื่อเตรียมความพร้อมสู่การเป็นนักศึกษาวิศวกรรมซอฟต์แวร์ที่มีคุณภาพ</p>
-                <p>กระผมมีความเชื่อมั่นว่า คณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมซอฟต์แwร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง เป็นสถาบันการศึกษาชั้นนำที่จะช่วยเติมเต็มความฝันและมอบองค์ความรู้ที่จำเป็นในการก้าวสู่การเป็นวิศวกรซอฟต์แวร์มืออาชีพได้ กระผมจึงหวังเป็นอย่างยิ่งว่าจะได้รับโอกาสในการเข้าศึกษาต่อ และพร้อมที่จะทุ่มเทอย่างสุดความสามารถเพื่อพัฒนาตนเองและสร้างชื่อเสียงให้แก่สถาบันฯ ต่อไป</p>
+                <p>ข้าพเจ้ามีความสนใจและความหลงใหลในโลกของการพัฒนาเกมและเทคโนโลยีมาโดยตลอด การได้สร้างสรรค์สิ่งต่างๆ จากตรรกะและโค้ด ทำให้ค้นพบเป้าหมายที่ชัดเจน โดยมีความมุ่งมั่นดังนี้:</p>
+                <ul>
+                    <li>มุ่งเน้นการพัฒนาเกมแนวสร้างสรรค์ที่ผสมผสานกลไกทางวิศวกรรมและจินตนาการ เช่น โปรเจกต์เกมแนว Dieselpunk Magic</li>
+                    <li>ชื่นชอบการศึกษาและประยุกต์ใช้เทคโนโลยีระดับเจาะลึก เช่น การเขียน Custom Shader ด้วยภาษา GLSL</li>
+                    <li>ให้ความสำคัญกับการออกแบบเนื้อเรื่อง (Story & World-building) เพื่อสร้างประสบการณ์ที่น่าประทับใจให้แก่ผู้เล่น</li>
+                    <li>สนใจค้นคว้าเทคโนโลยีขั้นสูงอย่าง EMP Technology เพื่อประยุกต์ใช้เป็นกิมมิคในงานพัฒนาของตนเอง</li>
+                </ul>
+                <p>แฟ้มสะสมผลงานฉบับนี้จัดทำขึ้นเพื่อนำเสนอประวัติส่วนตัว ผลงาน โครงงาน และประสบการณ์ต่างๆ ซึ่งสะท้อนให้เห็นถึงความมุ่งมั่น ความพยายาม และศักยภาพในการเรียนรู้เพื่อก้าวสู่การเป็นนักศึกษาวิศวกรรมซอฟต์แวร์ที่มีคุณภาพ และพัฒนาต่อยอดไปสู่นักพัฒนาซอฟต์แวร์ระดับมืออาชีพในอนาคต</p>
                 <div class="signature">
                     <p>ด้วยความเคารพอย่างสูง</p><br><br>
-                    <p>(นายจีรวัฒณ์ ปาดี)</p>
+                    <p>( Octx29 )</p>
                     <p>ผู้จัดทำ</p>
                 </div>
             </div>
@@ -554,21 +491,21 @@
              <h1 class="page-title">PROFILE<br>ประวัติส่วนตัว</h1>
              <div class="profile-grid">
                   <div class="profile-left">
-                       <img src="IMG_20251019_002124.jpg" alt="Profile Photo" class="profile-photo-placeholder">
+                       <div class="profile-photo-placeholder">[ รูปโปรไฟล์ ]</div>
                        <div class="profile-section">
                             <h3>CONTACT</h3>
                             <div class="profile-info">
-                                 <p><strong>ที่อยู่:</strong> 9 หมู่ 8 ต.แหลมกลัด อ.เมือง จ.ตราด</p>
-                                 <p><strong>โทรศัพท์:</strong> 0886205987</p>
-                                 <p><strong>อีเมล:</strong> Chirawatp4@gmail.com</p>
+                                 <p><strong>GitHub:</strong> github.com/Octx29</p>
+                                 <p><strong>ที่อยู่:</strong> [ ใส่ข้อมูลที่อยู่ของคุณ ]</p>
+                                 <p><strong>อีเมล:</strong> [ ใส่อีเมลของคุณ ]</p>
                             </div>
                        </div>
                        <div class="profile-section">
                             <h3>HOBBIES</h3>
                             <div class="profile-info">
-                                 <p>[ เขียนโค้ด ]</p>
-                                 <p>[ เล่นเกม ]</p>
-                                 <p>[ อ่านหนังสือเทคโนโลยี ]</p>
+                                 <p>[ Game Development (Roblox) ]</p>
+                                 <p>[ Storytelling & World-building ]</p>
+                                 <p>[ EMP Technology Research ]</p>
                             </div>
                        </div>
                   </div>
@@ -576,21 +513,16 @@
                        <div class="profile-section">
                             <h3>PERSONAL INFO</h3>
                             <div class="profile-info">
-                                 <p><strong>ชื่อ-สกุล:</strong> นายจีรวัฒณ์ ปาดี</p>
-                                 <p><strong>ชื่อเล่น:</strong> เก่ง</p>
-                                 <p><strong>วันเกิด:</strong> 29 ตุลาคม พ.ศ. 2552</p>
-                                 <p><strong>อายุ:</strong> 16 ปี</p>
-                                 <p><strong>เชื้อชาติ:</strong> ไทย</p>
-                                 <p><strong>สัญชาติ:</strong> ไทย</p>
-                                 <p><strong>ศาสนา:</strong> พุทธ</p>
+                                 <p><strong>นามปากกา/ชื่อ:</strong> Octx29</p>
+                                 <p><strong>ความถนัด:</strong> Game Development & System Design</p>
                             </div>
                        </div>
                        <div class="profile-section">
                             <h3>SKILLS</h3>
-                            <h4>Programming Languages</h4>
-                            <div class="skills-container"><div class="skill-icon">Python</div><div class="skill-icon">C++</div><div class="skill-icon">Java</div><div class="skill-icon">HTML</div><div class="skill-icon">CSS</div></div><br>
+                            <h4>Programming & Shaders</h4>
+                            <div class="skills-container"><div class="skill-icon">Luau</div><div class="skill-icon">Python</div><div class="skill-icon">C++</div><div class="skill-icon">GLSL</div></div><br>
                             <h4>Software & Tools</h4>
-                            <div class="skills-container"><div class="skill-icon">VS Code</div><div class="skill-icon">Git</div><div class="skill-icon">GitHub</div><div class="skill-icon">Figma</div></div><br>
+                            <div class="skills-container"><div class="skill-icon">Roblox Studio</div><div class="skill-icon">VS Code</div><div class="skill-icon">Git / GitHub</div></div><br>
                             <h4>Language</h4>
                             <div class="profile-info">
                                  <p><strong>Thai:</strong> Native</p>
@@ -607,18 +539,16 @@
                   <div class="timeline-container">
                        <div class="timeline-content">
                             <h2>ระดับมัธยมศึกษาตอนปลาย</h2>
-                            <h3>โรงเรียนสตรีประเสริฐศิลป์</h3>
-                            <p><strong>แผนการเรียน:</strong> [ แผนการเรียนวิทย์-คณิต ]</p>
-                            <p><strong>ปีการศึกษา:</strong> พ.ศ. 2571</p>
-                            <p><strong>เกรดเฉลี่ยสะสม (GPAX):</strong> [ GPAX ]</p>
+                            <h3>[ ชื่อโรงเรียนของคุณ ]</h3>
+                            <p><strong>แผนการเรียน:</strong> [ แผนการเรียนวิทย์-คณิต / สายคอมพิวเตอร์ ]</p>
+                            <p><strong>เกรดเฉลี่ยสะสม (GPAX):</strong> [ เกรดของคุณ ]</p>
                        </div>
                   </div>
                   <div class="timeline-container">
                        <div class="timeline-content">
                             <h2>ระดับมัธยมศึกษาตอนต้น</h2>
-                            <h3>โรงเรียนสตรีประเสริฐศิลป์</h3>
-                            <p><strong>ปีการศึกษา:</strong> พ.ศ. 2567</p>
-                            <p><strong>เกรดเฉลี่ยสะสม (GPAX):</strong> 3.79</p>
+                            <h3>[ ชื่อโรงเรียนของคุณ ]</h3>
+                            <p><strong>เกรดเฉลี่ยสะสม (GPAX):</strong> [ เกรดของคุณ ]</p>
                        </div>
                   </div>
              </div>
@@ -627,28 +557,19 @@
         <div class="page page-6" id="activities">
             <h1 class="page-title">ACTIVITIES<br>กิจกรรมที่เข้าร่วม</h1>
             <div class="activities-grid">
-                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 1 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 1 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบายสิ่งที่ได้เรียนรู้/ประสบการณ์ที่ได้รับ เช่น ได้เรียนรู้การทำงานเป็นทีม การแก้ปัญหาเฉพาะหน้า และพื้นฐานการเขียนโปรแกรมภาษา Python ]</p></div></div>
-                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 2 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 2 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบาย ]</p></div></div>
-                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 3 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 3 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบาย ]</p></div></div>
-            </div>
-        </div>
-        
-        <div class="page page-7">
-            <h1 class="page-title">ACTIVITIES<br>กิจกรรมที่เข้าร่วม</h1>
-            <div class="activities-grid">
-                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 4 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 4 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบาย ]</p></div></div>
-                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 5 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 5 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบาย ]</p></div></div>
-                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 6 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 6 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบาย ]</p></div></div>
+                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 1 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 1 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบายสิ่งที่ได้เรียนรู้/ประสบการณ์ที่ได้รับ ]</p></div></div>
+                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 2 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 2 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบายสิ่งที่ได้เรียนรู้/ประสบการณ์ที่ได้รับ ]</p></div></div>
+                 <div class="activity-card"><div class="activity-image-placeholder">[ รูปภาพกิจกรรม 3 ]</div><div class="activity-description"><h3>[ ชื่อกิจกรรม 3 ]</h3><p><strong>วันที่/สถานที่:</strong> [ ระบุ ]</p><p><strong>บทบาท/สิ่งที่ได้รับ:</strong> [ อธิบายสิ่งที่ได้เรียนรู้/ประสบการณ์ที่ได้รับ ]</p></div></div>
             </div>
         </div>
         
         <div class="page page-8" id="certificates">
             <h1 class="page-title">CERTIFICATES<br>เกียรติบัตรและรางวัล</h1>
             <div class="certs-grid">
-                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 1 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 1 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p><p><strong>วันที่ได้รับ:</strong> [ วันที่ ]</p></div>
-                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 2 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 2 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p><p><strong>วันที่ได้รับ:</strong> [ วันที่ ]</p></div>
-                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 3 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 3 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p><p><strong>วันที่ได้รับ:</strong> [ วันที่ ]</p></div>
-                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 4 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 4 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p><p><strong>วันที่ได้รับ:</strong> [ วันที่ ]</p></div>
+                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 1 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 1 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p></div>
+                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 2 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 2 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p></div>
+                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 3 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 3 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p></div>
+                 <div class="cert-card"><div class="cert-image-placeholder">[ รูปเกียรติบัตร 4 ]</div><h3>[ ชื่อรางวัล/เกียรติบัตร 4 ]</h3><p><strong>มอบให้โดย:</strong> [ ชื่อหน่วยงาน ]</p></div>
             </div>
         </div>
 
@@ -656,19 +577,27 @@
             <h1 class="page-title">PROJECTS & WORKS<br>ผลงานและโครงงาน</h1>
             <div class="project-container">
                  <div class="project-card">
-                      <div class="project-left"><div class="project-image-placeholder">[ Screenshot ผลงาน 1 ]</div><div class="project-qr-placeholder">[ QR Code ]</div></div>
+                      <div class="project-left"><div class="project-image-placeholder">[ Screenshot เกม Dieselpunk ]</div><div class="project-qr-placeholder">[ QR Code ]</div></div>
                       <div class="project-details">
-                           <h2>[ ชื่อโปรเจกต์ 1 ]</h2>
-                           <p>[ อธิบายรายละเอียดโปรเจกต์ ว่าคืออะไร ทำอะไรได้บ้าง แนวคิด และขั้นตอนการทำงานโดยย่อ ]</p>
-                           <div class="tech-stack"><h3>Technology Used:</h3><div class="skills-container"><div class="skill-icon">Python</div><div class="skill-icon">Tkinter</div><div class="skill-icon">SQLite</div></div></div>
+                           <h2>Dieselpunk Magic FPS (Roblox)</h2>
+                           <p>โปรเจกต์พัฒนาเกมแนว First-Person Shooter ที่นำเสนอความงามของยุคสงครามโลก (World War aesthetics) ผสมผสานกับระบบเวทมนตร์ที่ถูกร่ายและควบคุมผ่านเครื่องจักร พัฒนาระบบเกมเพลย์ทั้งหมดบนแพลตฟอร์ม Roblox Studio</p>
+                           <div class="tech-stack"><h3>Technology Used:</h3><div class="skills-container"><div class="skill-icon">Roblox Studio</div><div class="skill-icon">Luau</div><div class="skill-icon">Game Design</div></div></div>
                       </div>
                  </div>
                  <div class="project-card">
-                      <div class="project-left"><div class="project-image-placeholder">[ Screenshot ผลงาน 2 ]</div><div class="project-qr-placeholder">[ QR Code ]</div></div>
+                      <div class="project-left"><div class="project-image-placeholder">[ Screenshot Shader ]</div><div class="project-qr-placeholder">[ GitHub Repo ]</div></div>
                       <div class="project-details">
-                           <h2>[ ชื่อโปรเจกต์ 2 ]</h2>
-                           <p>[ อธิบายรายละเอียดโปรเจกต์ ว่าคืออะไร ทำอะไรได้บ้าง แนวคิด และขั้นตอนการทำงานโดยย่อ ]</p>
-                           <div class="tech-stack"><h3>Technology Used:</h3><div class="skills-container"><div class="skill-icon">HTML</div><div class="skill-icon">CSS</div><div class="skill-icon">JS</div><div class="skill-icon">GitHub</div></div></div>
+                           <h2>4-Color Monochrome Shader (GLSL)</h2>
+                           <p>Custom shader plugin ที่พัฒนาขึ้นเพื่อใช้งานในการแสดงผลของภาพ สร้างฟิลเตอร์ภาพแบบเรโทร 4 สีจำลองสไตล์ภาพกราฟิกจากเครื่อง Gameboy คลาสสิก</p>
+                           <div class="tech-stack"><h3>Technology Used:</h3><div class="skills-container"><div class="skill-icon">GLSL</div><div class="skill-icon">Math for Graphics</div></div></div>
+                      </div>
+                 </div>
+                 <div class="project-card">
+                      <div class="project-left"><div class="project-image-placeholder">[ Screenshot เนื้อเรื่อง/Art ]</div><div class="project-qr-placeholder">[ Link อ่านเพิ่มเติม ]</div></div>
+                      <div class="project-details">
+                           <h2>Guardian of the Stream: Reverse Chronicles</h2>
+                           <p>โปรเจกต์งานเขียนบทและการสร้างโลกจำลอง (World-Building) นำเสนอเรื่องราวของแม่มดผู้ทำหน้าที่พิทักษ์สายน้ำแห่งกาลเวลา และนักเดินทางที่ต้องเผชิญกับลูปเวลาที่ไม่มีวันสิ้นสุด</p>
+                           <div class="tech-stack"><h3>Technology Used:</h3><div class="skills-container"><div class="skill-icon">Creative Writing</div><div class="skill-icon">Storyboarding</div></div></div>
                       </div>
                  </div>
             </div>
@@ -676,15 +605,12 @@
 
         <div class="page page-10">
             <div class="circuit-bg"></div>
-            <a href="#home">
-                <img src="image_44e6ed.jpg" alt="KMITL Logo" class="kmitl-logo">
-            </a>
             <div class="back-cover-content">
                  <p class="quote">The best way to predict the future is to invent it.<br>- Alan Kay</p>
                  <h1 class="thank-you">THANK YOU</h1>
                  <div class="back-contact">
-                      <p><strong>Email:</strong> Chirawatp4@gmail.com</p>
-                      <p><strong>Phone:</strong> 0886205987</p>
+                      <p><strong>GitHub:</strong> github.com/Octx29</p>
+                      <p><strong>Email:</strong> [ ใส่อีเมลของคุณ ]</p>
                  </div>
             </div>
         </div>
